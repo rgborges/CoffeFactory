@@ -1,0 +1,15 @@
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\coffeefactory.console.exe
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\coffeefactory.console.deps.json
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\coffeefactory.console.runtimeconfig.json
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\coffeefactory.console.dll
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\ref\coffeefactory.console.dll
+Y:\CodeLab\CoffeFactory\coffeefactory.console\bin\Debug\net6.0\coffeefactory.console.pdb
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.csproj.AssemblyReference.cache
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.GeneratedMSBuildEditorConfig.editorconfig
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.AssemblyInfoInputs.cache
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.AssemblyInfo.cs
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.csproj.CoreCompileInputs.cache
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.dll
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\ref\coffeefactory.console.dll
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.pdb
+Y:\CodeLab\CoffeFactory\coffeefactory.console\obj\Debug\net6.0\coffeefactory.console.genruntimeconfig.cache
