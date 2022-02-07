@@ -1,4 +1,4 @@
-internal class CoffeeFactory
+internal class CoffeeFactory : ICoffeeFacotry
 {
     public CoffeeFactory() { }
     public ExpressCoffee CreateExpressCoffee()
