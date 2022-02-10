@@ -7,8 +7,6 @@ internal enum CoffeeMachineState
     Finished
 }
 
-
-
 internal class CoffeeMachine 
 {
     /// <summary>
@@ -19,27 +17,27 @@ internal class CoffeeMachine
     /// <summary>
     /// Coffee Factory class need to be set in order to produce different types of coffee
     /// </summary>
-   private ICoffeeFacotry? _coffeeFactory;
+    private ICoffeeFacotry? _coffeeFactory;
    /// <summary>
    /// This container represents a cup within the coffee machine
    /// </summary>
-   private Cup? _cupInput;
+    private Cup? _cupInput;
    /// <summary>
    /// Represents the current state of this machine
    /// </summary>
-   private CoffeeMachineState _state;
+    private CoffeeMachineState _state;
 
-   public CoffeeMachineState State { get => _state;  }
-   public Cup? Cup { get => _cupInput; }
-   
-   public CoffeeMachine(ICoffeeFacotry? factory)
+    public CoffeeMachineState State { get => _state;  }
+    public Cup? Cup { get => _cupInput; }
+    public CoffeeMachine() {}
+    public CoffeeMachine(ICoffeeFacotry? factory)
    {
        if(factory is null) throw new NullReferenceException();
 
        this._coffeeFactory = factory;
        this._state = CoffeeMachineState.Initilized;
    }
-   public void SetCup(ref Cup cup)
+    public void SetCup(ref Cup cup)
    {
        this._cupInput = cup;
        this._state = CoffeeMachineState.ReadyToStart;
@@ -49,11 +47,20 @@ internal class CoffeeMachine
    /// Sycronous task for make coffee. The coffe machine states will be changed.
    /// </summary>
    /// <param name="coffee"></param>
-   public void MakeCoffee(Coffee coffee)
+    public void MakeCoffee(Coffee coffee)
    {
        if(_cupInput is null) throw new NullReferenceException();
        this._state = CoffeeMachineState.Filling;
        this._cupInput.Fill(coffee);
        this._state = CoffeeMachineState.Finished;
-   }
+    }
+    public async Task<Cup> MakeCoffeeAsync(Coffee coffee, int volume)
+    {
+        Cup cup = new Cup(volume);
+        this._state = CoffeeMachineState.Filling;
+        cup.Fill(coffee);
+        await Task.Delay(3000);
+        this._state = CoffeeMachineState.Finished;
+        return cup;
+    }
 }
