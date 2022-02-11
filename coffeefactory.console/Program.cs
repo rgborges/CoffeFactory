@@ -1,13 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-var factory = new CoffeeFactory();
-var coffeeMachine = new CoffeeMachine(factory);
-//Create a cup 250 ml
-var cup = new Cup(250);
+﻿var coffeeMachine = new CoffeeMachine();
 
-//Set the cup within the machine
-coffeeMachine.SetCup(ref cup);
+var task1 = coffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
 
-coffeeMachine.MakeCoffee(new CapucchinoCoffee());
+var cup = await task1;
+Console.WriteLine(cup.ToString());
+Console.WriteLine("Coffee is ready!");
 
-//Get coffe
-Console.WriteLine($"{cup.ToString()}");
+
+
+var task2 = coffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
+
+var cup2 = await task2;
+Console.WriteLine(cup2.ToString());
+Console.WriteLine("Coffee is ready!");
