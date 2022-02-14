@@ -7,3 +7,8 @@ logger.Log($"{cupOfCoffee.ToString()}", LoggerMessageType.Info);
 logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
 var cupOfCoffee1 = await CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
 logger.Log($"{cupOfCoffee1.ToString()}", LoggerMessageType.Info);
+
+
+logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
+var cupOfCoffee3 = await CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
+logger.Log($"{cupOfCoffee3.ToString()}", LoggerMessageType.Info);
