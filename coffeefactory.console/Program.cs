@@ -1,15 +1,9 @@
-﻿var coffeeMachine = new CoffeeMachine();
+﻿var logger = new ConsoleLogger();
+var CoffeeMachine = new CoffeeMachine();
+logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
+var cupOfCoffee = await CoffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
+logger.Log($"{cupOfCoffee.ToString()}", LoggerMessageType.Info);
 
-var task1 = coffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
-
-var cup = await task1;
-Console.WriteLine(cup.ToString());
-Console.WriteLine("Coffee is ready!");
-
-
-
-var task2 = coffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
-
-var cup2 = await task2;
-Console.WriteLine(cup2.ToString());
-Console.WriteLine("Coffee is ready!");
+logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
+var cupOfCoffee1 = await CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
+logger.Log($"{cupOfCoffee1.ToString()}", LoggerMessageType.Info);
