@@ -13,6 +13,14 @@ public static class Display
             Console.Write(message);
             Console.WriteLine(" [INFO]");
         }
+        else if(type == LoggerMessageType.Warning)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write($"{DateTime.Now}: ");
+            Console.Write(message);
+            Console.WriteLine(" [INFO]");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
         
     }
 }
