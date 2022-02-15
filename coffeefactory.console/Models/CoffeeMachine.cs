@@ -56,6 +56,7 @@ internal class CoffeeMachine
     }
     public async Task<Cup> MakeCoffeeAsync(Coffee coffee, int volume)
     {
+        Display.Print("Starting to make a new coffee");
         Cup cup = new Cup(volume);
         this._state = CoffeeMachineState.Filling;
         cup.Fill(coffee);

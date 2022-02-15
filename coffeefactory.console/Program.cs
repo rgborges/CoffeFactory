@@ -1,14 +1,25 @@
-﻿var logger = new ConsoleLogger();
-var CoffeeMachine = new CoffeeMachine();
-logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
-var cupOfCoffee = await CoffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
-logger.Log($"{cupOfCoffee.ToString()}", LoggerMessageType.Info);
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 
-logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
-var cupOfCoffee1 = await CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
-logger.Log($"{cupOfCoffee1.ToString()}", LoggerMessageType.Info);
+class Program
+{
+   static async Task Main(string[] args)
+   {
+        var logger = new ConsoleLogger();
+        var CoffeeMachine = new CoffeeMachine();
+        logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
+        
+        var task1 = CoffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
+        logger.Log($"Coffe 01 scheduled to being executed", LoggerMessageType.Info);
+        
+        var task2 = CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
+        logger.Log($"Coffe 02 scheduled to being executed", LoggerMessageType.Info);
 
-
-logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
-var cupOfCoffee3 = await CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
-logger.Log($"{cupOfCoffee3.ToString()}", LoggerMessageType.Info);
+        var coffe1 = await task1;
+        logger.Log($"{coffe1.ToString()}", LoggerMessageType.Info);
+        
+        var coffe2 = await task2;
+        logger.Log($"{coffe2.ToString()}", LoggerMessageType.Info);
+   }       
+}
