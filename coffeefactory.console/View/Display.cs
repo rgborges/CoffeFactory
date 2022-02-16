@@ -18,7 +18,7 @@ public static class Display
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{DateTime.Now}: ");
             Console.Write(message);
-            Console.WriteLine(" [INFO]");
+            Console.WriteLine(" [WARN]");
             Console.ForegroundColor = ConsoleColor.White;
         }
         
