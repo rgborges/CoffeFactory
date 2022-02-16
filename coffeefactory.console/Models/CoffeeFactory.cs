@@ -5,8 +5,8 @@ internal class CoffeeFactory : ICoffeeFacotry
     {
       return new ExpressCoffee();
     }
-    public CapucchinoCoffee CreateCappuchinoCoffee()
+    public CappuccinoCoffee CreateCappuchinoCoffee()
     {
-      return new CapucchinoCoffee();   
+      return new CappuccinoCoffee();   
     }
 }

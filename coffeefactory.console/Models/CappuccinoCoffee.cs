@@ -1,4 +1,4 @@
-internal class CapucchinoCoffee : Coffee
+internal class CappuccinoCoffee : Coffee
 {
     public override string ToString()
     {

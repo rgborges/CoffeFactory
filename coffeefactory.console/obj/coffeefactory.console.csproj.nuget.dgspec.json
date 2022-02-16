@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\CodeLab\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj": {}
+    "Y:\\CodeLab\\CoffeFactory\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj": {}
   },
   "projects": {
-    "Y:\\CodeLab\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj": {
+    "Y:\\CodeLab\\CoffeFactory\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\CodeLab\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj",
+        "projectUniqueName": "Y:\\CodeLab\\CoffeFactory\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj",
         "projectName": "coffeefactory.console",
-        "projectPath": "Y:\\CodeLab\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj",
+        "projectPath": "Y:\\CodeLab\\CoffeFactory\\CoffeFactory\\coffeefactory.console\\coffeefactory.console.csproj",
         "packagesPath": "C:\\Users\\rborges\\.nuget\\packages\\",
-        "outputPath": "Y:\\CodeLab\\CoffeFactory\\coffeefactory.console\\obj\\",
+        "outputPath": "Y:\\CodeLab\\CoffeFactory\\CoffeFactory\\coffeefactory.console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rborges\\AppData\\Roaming\\NuGet\\NuGet.Config",

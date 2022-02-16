@@ -8,9 +8,9 @@ class Program
    {
         var logger = new ConsoleLogger();
         var CoffeeMachine = new CoffeeMachine();
-        logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
+        logger.Log($"Starting a new coffee in the coffee machine, wait a modotment..", LoggerMessageType.Info);
         
-        var task1 = CoffeeMachine.MakeCoffeeAsync(new CapucchinoCoffee(), 250);
+        var task1 = CoffeeMachine.MakeCoffeeAsync(new CappuccinoCoffee(), 250);
         logger.Log($"Coffe 01 scheduled to being executed", LoggerMessageType.Info);
         
         var task2 = CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
