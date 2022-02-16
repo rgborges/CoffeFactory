@@ -9,6 +9,8 @@ internal enum CoffeeMachineState
 
 internal class CoffeeMachine 
 {
+    public delegate void ReportChange(string message);
+    public event ReportChange? eReportChanged;
     /// <summary>
     /// A coffee machine interacts with a cup and makes coffee inside the machine. In this example, at first 
     /// we expect that a coffee machine interacts with a cup.
@@ -49,19 +51,24 @@ internal class CoffeeMachine
    /// <param name="coffee"></param>
     public void MakeCoffee(Coffee coffee)
    {
-       if(_cupInput is null) throw new NullReferenceException();
+       if(_cupInput is null || eReportChanged is null) throw new NullReferenceException();
        this._state = CoffeeMachineState.Filling;
+       this.eReportChanged($"Coffee Machine state changed to Filling for {coffee.ToString()}");
        this._cupInput.Fill(coffee);
        this._state = CoffeeMachineState.Finished;
+       this.eReportChanged($"Coffee Machine state changed to Finished for {coffee.ToString()}");
     }
     public async Task<Cup> MakeCoffeeAsync(Coffee coffee, int volume)
     {
-        Display.Print("Starting to make a new coffee");
+        if(eReportChanged is null) throw new NullReferenceException("The delegate function assigned to CoffeeMachine event is null");
+        this.eReportChanged($"Initiating machine to a new coffee {coffee.ToString()}");
         Cup cup = new Cup(volume);
         this._state = CoffeeMachineState.Filling;
+        this.eReportChanged($"Coffee Machine state changed to Filling for {coffee.ToString()}");
         cup.Fill(coffee);
         await Task.Delay(3000);
         this._state = CoffeeMachineState.Finished;
+        this.eReportChanged($"Coffee Machine state changed to Finished for {coffee.ToString()}");
         return cup;
     }
 }
