@@ -8,6 +8,7 @@
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
+            "justMyCode": false,
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/coffeefactory.console/bin/Debug/net6.0/coffeefactory.console.dll",

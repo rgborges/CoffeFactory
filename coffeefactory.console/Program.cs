@@ -6,24 +6,29 @@ class Program
 {
    static async Task Main(string[] args)
    {
-        var logger = new ConsoleLogger();
-        var CoffeeMachine = new CoffeeMachine();
-        //Subscribe the coffee machine event
-        CoffeeMachine.eReportChanged += CoffeMachineReport;
+       var coffeeMachine = new CoffeeMachine();
+       var item = new CoffeeItem(new CappuccinoCoffee(), 12.90, 250);
+       var service = new CoffeeService();
+       var logger = new FileLogger();
+       var worker = new CoffeeProcessorWorker(service, coffeeMachine, logger);
+       coffeeMachine.eReportChanged += CoffeMachineReport;
 
-        logger.Log($"Starting a new coffee in the coffee machine, wait a moment..", LoggerMessageType.Info);
-        
-        var task1 = CoffeeMachine.MakeCoffeeAsync(new CappuccinoCoffee(), 250);
-        logger.Log($"Coffee 01 scheduled to being executed", LoggerMessageType.Info);
-        
-        var task2 = CoffeeMachine.MakeCoffeeAsync(new ExpressCoffee(), 250);
-        logger.Log($"Coffee 02 scheduled to being executed", LoggerMessageType.Info);
-
-        var coffe1 = await task1;
-        logger.Log($"{coffe1.ToString()}", LoggerMessageType.Info);
-        
-        var coffe2 = await task2;
-        logger.Log($"{coffe2.ToString()}", LoggerMessageType.Info);
+       while(true)
+       {
+          try
+          {
+            Display.PrintWaitMessage();
+            //var a = Console.ReadLine();
+            service.RequestNewCoffee(item);
+            Display.Print("New coffee requested!");
+            Thread.Sleep(1000);
+          }
+          catch(Exception e)
+          {
+             Display.Print(e.Message);
+          }
+          
+       }
    }
    private static void CoffeMachineReport(string m)
    {

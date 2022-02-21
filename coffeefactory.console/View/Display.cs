@@ -23,4 +23,13 @@ public static class Display
         }
         
     }
+
+    internal static void PrintWaitMessage()
+    {
+       Console.Write("Press any key to generate a new Coffee...");
+    }
+    internal static void NewCoffeeRequested()
+    {
+        System.Console.WriteLine("new coffee requested");
+    }
 }
