@@ -1,4 +1,4 @@
-internal class CoffeeService
+internal class CoffeeService : ICoffeeService
 {
     /// <summary>
     /// This delegate defines a function model to a function which receives a new Coffee type and returns a Cup.
@@ -11,17 +11,10 @@ internal class CoffeeService
     /// Input list for coffee orders itens.
     /// </summary>
     private List<CoffeeItem> coffeeItemList;
-
-    internal List<CoffeeItem> GetPendingOrders()
-    {
-        return orders.Take<CoffeeItem>(2).ToList();
-    }
-
     /// <summary>
     /// Output list for cups filled by coffee.
     /// </summary>
     internal List<Cup>? processedCupList;
-
     public Queue<CoffeeItem> Orders { get => orders; } 
     /// <summary>
     /// This is the list of orders receiveid by this service
@@ -45,9 +38,13 @@ internal class CoffeeService
         coffeeItemList.Add(incomeItem);
         //Put the coffee in the queue to be processed
         orders.Enqueue(incomeItem);
-        //Raise process function coffee
-        eProcessCoffee?.Invoke();
     }
-
- 
+    public List<CoffeeItem> GetPendingOrders()
+    {
+        return Orders.ToList();
+    }
+    public List<Cup> GetProcessedCoffees()
+    {
+        return processedCupList ?? new List<Cup>();
+    }
 }
