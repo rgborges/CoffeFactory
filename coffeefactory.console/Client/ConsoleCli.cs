@@ -79,7 +79,7 @@ internal class ConsoleCli
                     break;
                 }
             break;
-            case "--help":
+            case "help":
                 Display.PrintHelp();
             break;
         }

@@ -41,7 +41,15 @@ public static class Display
     internal static void PrintHelp()
     {
         System.Console.WriteLine("Command                   | Descripition");
+        System.Console.WriteLine("--------------------------+--------------------------------------------------------------------------------------");
         System.Console.WriteLine("new coffee                | Request a new coffe to the system. Use -t c for cappuccino and -t e for express.");
+        System.Console.WriteLine("new check                 | Check information from the client."); 
+        System.Console.WriteLine("--------------------------+--------------------------------------------------------------------------------------");
+        System.Console.WriteLine("Examples: ");
+        System.Console.WriteLine("new coffee -t c      : Request a new cappuccino coffee.");
+        System.Console.WriteLine("check pending-orders : Check pending orders from the service.");
+        System.Console.WriteLine("check ready-coffees  : Check the coffess processed.");
+
     }
     internal static void PrintLogo()
     {
