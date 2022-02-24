@@ -8,4 +8,5 @@ internal interface ICoffeeClient
     /// <returns></returns>
     CoffeeItem RequestCappuccinoCoffee(int cupVolume);
     List<CoffeeItem> GetPendingOrders();
+    List<Cup> GetProcessedCoffees();
 }

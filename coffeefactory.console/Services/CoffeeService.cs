@@ -14,7 +14,7 @@ internal class CoffeeService : ICoffeeService
     /// <summary>
     /// Output list for cups filled by coffee.
     /// </summary>
-    internal List<Cup>? processedCupList;
+    private List<Cup> processedCupList;
     public Queue<CoffeeItem> Orders { get => orders; } 
     /// <summary>
     /// This is the list of orders receiveid by this service
@@ -26,6 +26,7 @@ internal class CoffeeService : ICoffeeService
         orders = new Queue<CoffeeItem>();
         coffeeItemList = new List<CoffeeItem>();
         coffeeFactory = new CoffeeMachine();
+        processedCupList = new List<Cup>();
     }
     /// <summary>
     /// Adds a new coffee item request into the production queue
@@ -38,10 +39,16 @@ internal class CoffeeService : ICoffeeService
         coffeeItemList.Add(incomeItem);
         //Put the coffee in the queue to be processed
         orders.Enqueue(incomeItem);
+        //Invoke a new event
+        eProcessCoffee?.Invoke();
+    }
+    public void SetNewProcessedCoffee(Cup cupOfCoffee)
+    {
+        this.processedCupList.Add(cupOfCoffee);
     }
     public List<CoffeeItem> GetPendingOrders()
     {
-        return Orders.ToList();
+        return orders.ToList();
     }
     public List<Cup> GetProcessedCoffees()
     {

@@ -73,4 +73,12 @@ public static class Display
     {
         Display.PrintLog($"New coffee order requested to the service: \n {temp.ToString()}", LoggerMessageType.Info);
     }
+
+    internal static void PrintReadyCoffees(List<Cup> cups)
+    {
+        foreach(Cup cup in cups)
+        {
+            Console.WriteLine(cup.ToString());
+        }
+    }
 }

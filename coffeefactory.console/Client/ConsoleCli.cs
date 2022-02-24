@@ -64,7 +64,17 @@ internal class ConsoleCli
                         }
                         catch (Exception e)
                         {
-                            
+                            throw e;
+                        }
+                    break;
+                    case "ready-coffees":
+                         try
+                        {
+                            Display.PrintReadyCoffees(client.GetProcessedCoffees());
+                        }
+                        catch (Exception e)
+                        {
+                            throw e;
                         }
                     break;
                 }

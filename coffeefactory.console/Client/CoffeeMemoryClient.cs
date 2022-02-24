@@ -18,4 +18,9 @@ internal class CoffeeMemoryClient : ICoffeeClient
     {
         return service.GetPendingOrders();
     }
+
+    public List<Cup> GetProcessedCoffees()
+    {
+        return service.GetProcessedCoffees();
+    }
 }

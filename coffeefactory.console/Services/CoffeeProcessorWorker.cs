@@ -3,6 +3,7 @@ internal class CoffeeProcessorWorker
     private CoffeeMachine factory;
     private CoffeeService? service;
     private ILogger logger;
+    public bool isEnable = false; 
 
     public CoffeeProcessorWorker(CoffeeService service, CoffeeMachine factory, ILogger logger)
     {
@@ -20,14 +21,7 @@ internal class CoffeeProcessorWorker
         {
             var order = service.Orders.Dequeue();
             var cup = await factory.MakeCoffeeAsync(order.Coffee, order.Volume);
-            if(service.processedCupList is not null)
-            {
-                service.processedCupList.Add(cup);
-            }
-            else
-            {
-                service.processedCupList = new List<Cup>();
-            }
+            service.SetNewProcessedCoffee(cup);
         }
     }
     private void LogMessage(string message)
