@@ -7,6 +7,7 @@ internal interface ICoffeeClient
     /// <param name="cupVolume"></param>
     /// <returns></returns>
     CoffeeItem RequestCappuccinoCoffee(int cupVolume);
+    //Task<CoffeeItem> RequestCappuccinoAsyncCoffee(int cupVolume);
     List<CoffeeItem> GetPendingOrders();
     List<Cup> GetProcessedCoffees();
 }

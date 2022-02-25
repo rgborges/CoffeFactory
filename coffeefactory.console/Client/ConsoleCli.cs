@@ -1,9 +1,9 @@
 internal class ConsoleCli
 {
-    private CoffeeItem _temp;
+    private CoffeeItem? _temp;
     private List<Task>  worker;
     private readonly ICoffeeClient client;
-    private readonly string[] args;
+    private readonly string[]? args;
     //new coffee -t c //asks for a couppuchino coffee
     //new coffee -t e //asks for a express coffee
     //check order -i <guid>

@@ -23,4 +23,12 @@ internal class CoffeeMemoryClient : ICoffeeClient
     {
         return service.GetProcessedCoffees();
     }
+
+    public Task RequestCappuccinoAsyncCoffee(int cupVolume)
+    {
+        var order = new CoffeeItem(new CappuccinoCoffee(), 12.90, cupVolume);
+        var task = service.RequestNewCoffeeAsync(order);
+        return task;
+    }
+       
 }

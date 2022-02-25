@@ -54,4 +54,9 @@ internal class CoffeeService : ICoffeeService
     {
         return processedCupList ?? new List<Cup>();
     }
+
+    public async Task RequestNewCoffeeAsync(CoffeeItem order)
+    {
+        await Task.Run(() => this.RequestNewCoffee(order));
+    }
 }
