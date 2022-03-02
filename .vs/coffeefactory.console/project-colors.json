@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "087b81c7-d0f6-418e-a300-a8b96a0b4845": {
+      "ProjectGuid": "087b81c7-d0f6-418e-a300-a8b96a0b4845",
+      "DisplayName": "coffee.factory.httpserver",
+      "ColorIndex": 0
+    },
+    "34922ca6-a7d9-47e7-a9d0-7d6226c4f7ef": {
+      "ProjectGuid": "34922ca6-a7d9-47e7-a9d0-7d6226c4f7ef",
+      "DisplayName": "coffeefactory.console",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

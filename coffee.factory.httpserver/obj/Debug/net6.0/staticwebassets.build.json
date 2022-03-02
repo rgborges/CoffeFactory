@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UcifEG9rhrzb2GUpr5VYawYkTHxZd2BILyjUmHj+YYE=",
+  "Source": "coffee.factory.httpserver",
+  "BasePath": "_content/coffee.factory.httpserver",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

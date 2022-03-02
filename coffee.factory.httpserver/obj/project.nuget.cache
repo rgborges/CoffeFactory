@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "v0zLT6XN5hW/xfXQXm6apm2uXIC7xeua65Xu0tuS1As4BCPpoyyBYsF+jphdVFFp/Y/alJs7pcT0Dnpaje/90Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TG456GS\\source\\repos\\CoffeFactory\\coffee.factory.httpserver\\coffee.factory.httpserver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TG456GS\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\TG456GS\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\TG456GS\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\TG456GS\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\TG456GS\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\TG456GS\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
